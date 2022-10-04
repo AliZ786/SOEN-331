@@ -11,10 +11,23 @@
   \item How are the following two expressions translated into plain English? Are the two
   expressions logically equivalent?
     \begin{itemize}
-          \item $\forall a \exists b \ {\textit{received\_request(a,b)}.
-          
-          
-      
+      \item \emph{$\forall$a $\exists$b received\_request(a, b).}
+      \item \emph{$\exists$b $\forall$a received\_request(a, b).}
     
+    \end{itemize}
+
+    \noindent \underline{Solution}:\\ The first statement \emph{$\forall$ a $\exists$ b received\_request(a, b).} reads that every person a has received a request from one person b.\\
+    The second statement \emph{$\exists$ b $\forall$ a received\_request(a, b).} reads that there exists a person b which has a received a request from all people a.\\
+    In terms of logical equvialency, we would need to determine if the truth values for both of these statements are the same. For the first statement, \\ 
+    while it is possible that every person a has received a request for one person b, it is highly unlikely that in the second statement, that one person b has received \\ 
+    a request from every person from a. Hence, both of these statement are NOT logically equivalent. \\
+         
+  
+  \item  Discuss in detail whether we can we claim the following:\
+      \begin{itemize}
+        \item[] \emph{$\forall$a $\exists$b received\_request(a, b)} $\rightarrow$ \emph{$\exists$b $\forall$a received\_request(a, b).}
+      \end{itemize}
+
     
+  \end{enumerate}   
  

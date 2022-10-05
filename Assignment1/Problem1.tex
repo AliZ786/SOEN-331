@@ -1,4 +1,4 @@
-\newpage
+
 
 \section{Problem 1: Predicate Logic 1 (10 pts)}
 \subsection{Description:}
@@ -19,7 +19,7 @@
     \noindent \underline{Solution}:\\ The first statement \emph{$\forall$ a $\exists$ b received\_request(a, b).} reads that every person a has received a request from one person b.\\
     The second statement \emph{$\exists$ b $\forall$ a received\_request(a, b).} reads that there exists a person b which has a received a request from all people a.\\
     In terms of logical equvialency, we would need to determine if the truth values for both of these statements are the same. For the first statement, \\ 
-    while it is possible that every person a has received a request for one person b, it is highly unlikely that in the second statement, that one person b has received \\ 
+    while it is possible that every person a has received a request from one person b, it is highly unlikely that in the second statement, that one person b has received \\ 
     a request from every person from a. \textbf{Hence, both of these statement are NOT logically equivalent}. \\
          
   
@@ -50,7 +50,13 @@
     
     \end{itemize}
 
-    \noindent \underline{Solution}:\\
+    \noindent \underline{Solution}:\\ The first statement \emph{$\forall$b $\exists$a received\_request(a, b).} reads that every person b has received a request from one such person a. The second statement \
+    \emph{$\exists$a $\forall$b received\_request(a, b).} states that there exists a person a which has a received from every person b.\
+    To make sure that these statements are logically equivalent, we would need to determine if the truth values for these statements are the same.\
+    While in the first statement, every person b does receive a request from one person a, we have no way to make sure that every person b get the request from the same person a. \
+    If that statement would hold, then we could say that there would exist a person a who receives a request from every person b, but since this is not the case\
+    \textbf{Both of these statements are NOT logically equivalent}.
+
     
 
     

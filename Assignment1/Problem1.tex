@@ -3,7 +3,7 @@
 \section{Problem 1: Predicate Logic 1 (10 pts)}
 \subsection{Description:}
 
-\noindent {In the domain of all people in the room, consider the predicate {\textit{received\_request(a,b)}} that is \\ intepreted as}}
+\noindent {In the domain of all people in the room, consider the predicate {\textit{received\_request(a,b)}} that is \\ intepreted as}
 
 \noident \textit{''[person] a has received a request from [person] b to connect on some social platform''}
 
@@ -20,13 +20,22 @@
     The second statement \emph{$\exists$ b $\forall$ a received\_request(a, b).} reads that there exists a person b which has a received a request from all people a.\\
     In terms of logical equvialency, we would need to determine if the truth values for both of these statements are the same. For the first statement, \\ 
     while it is possible that every person a has received a request for one person b, it is highly unlikely that in the second statement, that one person b has received \\ 
-    a request from every person from a. Hence, both of these statement are NOT logically equivalent. \\
+    a request from every person from a. \textbf{Hence, both of these statement are NOT logically equivalent}. \\
          
   
   \item  Discuss in detail whether we can we claim the following:\
-      \begin{itemize}
-        \item[] \emph{$\forall$a $\exists$b received\_request(a, b)} $\rightarrow$ \emph{$\exists$b $\forall$a received\_request(a, b).}
-      \end{itemize}
+    \begin{itemize}
+      \item[] \emph{$\forall$a $\exists$b received\_request(a, b)} $\rightarrow$ \emph{$\exists$b $\forall$a received\_request(a, b).}
+    \end{itemize}
+
+    \noindent \underline{Solution}:\\ The statement \emph{$\forall$a $\exists$b received\_request(a, b)} $\rightarrow$ \emph{$\exists$b $\forall$a received\_request(a, b).} is \textbf{FALSE}.\\
+    The first predicate states that all the people from a have received a request from each person b. While this does mean that everyone person a received a request from a person b, it does not neccessarily \
+    mean that all the a people asked the same b people. Every a person could have received a request from a different b person. Predicate 2, however, states that there exists a person b who has received a request \
+    from every person a, which we have proved from the above statement is \textbf{FALSE}.
+
+
+
+    
 
     
   \end{enumerate}   

@@ -28,19 +28,86 @@ airplanes = \\
 
 \begin{enumerate}
   \item What is the value of the following expression:
-  \[ \{  A330, 747\}  \lhd airplanes \]\
-  \noindent\underline{Solution:}\\
+  \[ \{A330, 747\}  \lhd airplanes \]\
+  \noindent\underline{Solution:}\\ This is translated to \emph{'' select all the pairs of model whose domain is A330 and 747''}. The result that we get from this is\\
+  
+  \[
+\ {\{A330, 747\}  \lhd airplanes}  = \
+\hspace{5mm} \{ \\
+\hspace{10mm} A330 \mapsto Airbus,\\
+\hspace{10mm} 747 \mapsto Boeing\\
+\hspace{5mm} \}
+  \]
+
   \item What is the value of the following expression:
   \[ airplanes \rhd \{ Comac, Embraer \} \]
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\This is translated to \emph{'' select all the pairs of manufacturers whose range is Comac and Embraer''}. The result that we get from this is\\
+  \[
+\ airplanes \rhd \{ Comac, Embraer \}  = \
+\hspace{5mm} \{ \\
+\hspace{10mm} C919 \mapsto Comac,\\
+\hspace{10mm} E170 \mapsto Embraer,\\
+\hspace{10mm} E175 \mapsto Embraer\\
+\hspace{5mm} \}
+  \]
   \item What is the value of the following expression:
-  \[ \{ A320,A330,A350, E170 \} \ndres airplanes \]
-  \noindent\underline{Solution:}\\
+  \[ \{A320,A330,A350, E170 \} \ndres airplanes \]
+  \noindent\underline{Solution:}\\ This is translated to \emph{'' remove all the pairs of models whose domain is A320, A330, A350 and E170''}. The result that we get from this is\\
+
+  \[
+\ \{A320,A330,A350, E170 \} \ndres airplanes  = \
+\hspace{5mm} \{ \\
+\hspace{10mm} A380 \mapsto Airbus,\\
+\hspace{10mm} 737 \mapsto Boeing,\\
+\hspace{10mm} 747 \mapsto Boeing,\\
+\hspace{10mm} Superjet100 \mapsto Sukhoi,\\
+\hspace{10mm} C919 \mapsto Comac,\\
+\hspace{10mm} Global7500 \mapsto Bombardier,\\
+\hspace{10mm} Global8000 \mapsto Bombardier,\\
+\hspace{10mm} E175 \mapsto Embraer\\
+\hspace{5mm} \}
+  \]
+  \noindent This is called domain substraction. While this demonstrated what the effect will be, for the effect to properly take place, we must do \emph{{airplanes'} = \{A320,A330,A350, E170 \} \ndres airplanes}\\
+  
   \item What is the value of the following expression:
   \[ airplanes \nrres \{ Airbus, Boeing\} \]
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\  This is translated to \emph{'' remove all the pairs of models whose range is Airbus and Boeing''}. The result that we get from this is\\
+
+  \[
+\ airplanes \nrres \{ Airbus, Boeing\}  = \
+\hspace{5mm} \{ \\
+\hspace{10mm} Superjet100 \mapsto Sukhoi,\\
+\hspace{10mm} C919 \mapsto Comac,\\
+\hspace{10mm} Global7500 \mapsto Bombardier,\\
+\hspace{10mm} Global8000 \mapsto Bombardier,\\
+\hspace{10mm} E170 \mapsto Embraer,\\
+\hspace{10mm} E175 \mapsto Embraer\\
+\hspace{5mm} \}
+  \]
+  \noindent This is called range substraction. While this demonstrated what the effect will be, for the effect to properly take place, we must do \emph{airplanes'} =  airplanes \nrres \{ Airbus, Boeing\}\\
+
   \item What is the value of the following expression:
   \[ airplanes \oplus \{ Su\_80 \mapsto Sukhoi \} \]
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\ When the symbol $\oplus$ is involved, we can either assume we are going to insert or modify in the database\\
+  In this case, however, we do not have \emph{Su\_80} in the database already, hence this has to be an insertion. For an insertion to properly happen in the DB,\\
+  We would need to \emph{airplane'} = airplanes \oplus \{ Su\_80 \mapsto Sukhoi \} \], but for the sake of simplicity for this problem, We would have \\
+  \[
+airplanes \oplus \{ Su\_80 \mapsto Sukhoi  \}=
+\hspace{5mm} \{ \\
+\hspace{10mm} A320 \mapsto Airbus,\\
+\hspace{10mm} A330 \mapsto Airbus,\\
+\hspace{10mm} A350 \mapsto Airbus,\\
+\hspace{10mm} A380 \mapsto Airbus,\\
+\hspace{10mm} 737 \mapsto Boeing,\\
+\hspace{10mm} 747 \mapsto Boeing,\\
+\hspace{10mm} Superjet100 \mapsto Sukhoi,\\
+\hspace{10mm} C919 \mapsto Comac,\\
+\hspace{10mm} Global7500 \mapsto Bombardier,\\
+\hspace{10mm} Global8000 \mapsto Bombardier,\\
+\hspace{10mm} E170 \mapsto Embraer,\\
+\hspace{10mm} E175 \mapsto Embraer,\\
+\hspace{10mm} Su\_80 \mapsto Sukhoi,\\
+\hspace{5mm} \}
+\]
 
 \end{enumerate}

@@ -4,3 +4,43 @@
 
 \noindent Consider the following binary relation: \\
 
+\[ airplanes : Model \leftrightarrow Manufacturer \]
+
+\noindent where
+
+\[
+airplanes = \\
+\hspace{5mm} \{ \\
+\hspace{10mm} A320 \mapsto Airbus,\\
+\hspace{10mm} A330 \mapsto Airbus,\\
+\hspace{10mm} A350 \mapsto Airbus,\\
+\hspace{10mm} A380 \mapsto Airbus,\\
+\hspace{10mm} 737 \mapsto Boeing,\\
+\hspace{10mm} 747 \mapsto Boeing,\\
+\hspace{10mm} Superjet100 \mapsto Sukhoi,\\
+\hspace{10mm} C919 \mapsto Comac,\\
+\hspace{10mm} Global7500 \mapsto Bombardier,\\
+\hspace{10mm} Global8000 \mapsto Bombardier,\\
+\hspace{10mm} E170 \mapsto Embraer,\\
+\hspace{10mm} E175 \mapsto Embraer\\
+\hspace{5mm} \}
+\]
+
+\begin{enumerate}
+  \item What is the value of the following expression:
+  \[ \{  A330, 747\}  \lhd airplanes \]\
+  \noindent\underline{Solution:}\\
+  \item What is the value of the following expression:
+  \[ airplanes \rhd \{ Comac, Embraer \} \]
+  \noindent\underline{Solution:}\\
+  \item What is the value of the following expression:
+  \[ \{ A320,A330,A350, E170 \} \ndres airplanes \]
+  \noindent\underline{Solution:}\\
+  \item What is the value of the following expression:
+  \[ airplanes \nrres \{ Airbus, Boeing\} \]
+  \noindent\underline{Solution:}\\
+  \item What is the value of the following expression:
+  \[ airplanes \oplus \{ Su\_80 \mapsto Sukhoi \} \]
+  \noindent\underline{Solution:}\\
+
+\end{enumerate}

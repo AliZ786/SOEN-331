@@ -31,7 +31,7 @@ map = \\
   \item Is \emph{map} a function? Explain and if Yes, determine the type of the function.\\
   \noindent\underline{Solution:}\\
   \item Define the precondition for operation \emph{add}, that adds a new flight-airline pair.\\
-  \noindent\underline{Solution:}\\ Intially we would need to check if the ordered pair exists in maps. To check this, the domain of map should not contain the airline.\\
+  \noindent\underline{Solution:}\\ Intially we would need to check if the ordered pair exists in maps. To check this, we would need to see that the flight is not contained in the database.\\
   If that doesn't exist, then we can add the new ordered pair. The translated statement for the add would be:\\
   \textbf{\emph{flight $\notin$ dom map}}\\
   \textbf{For Questions 4 and 5 assume the presence of the above precondition:}\\
@@ -44,17 +44,34 @@ map = \\
   \end{itemize}
   \textbf{For Questions 6 and 7 assume that the above precondition is removed:}\\
   \item What would be the result of calling operation \emph{add} with \emph{flight}? = \emph{TS765}, and \emph{airline}? = \emph{American Airlines}?\\
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\ Since the flight TS765 already exists in the domain of maps, \textbf{this operation will give us a failure}.
   \item What would be the result of calling \emph{add} with\
   \[
   \hspace{10mm} \emph{flight}? = AA333,\\
   \hspace{10mm} \emph{airline}? = Air Canada,
   \]
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\ Since this flight does not exist in the domain of maps, we would be able to add this ordered pair.\\
+  We would the use the insertion operator, which would look like:\
+  \[
+    \emph{map'} = map \oplus\{AA333 \mapsto Air Canada\}  = \
+    \hspace{5mm} \{ \\
+    \hspace{10mm} AA333 \mapsto \emph{Air Canada},\\
+    \hspace{10mm} AAA333 \mapsto \emph{American Airlines},\\
+    \hspace{10mm} AY29 \mapsto \emph{Finnair},\\
+    \hspace{10mm} TS261 \mapsto \emph{Air Transat},\\
+    \hspace{10mm} TS765 \mapsto \emph{Air Transat}\\
+    \hspace{5mm} \}
+      \]
+  
   \item Under what conditions, if any, can \emph{set union} serve as a mechanism to successfully add a new record into the database table? What error could possibly occur?\\
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\ Set Union is used to add a new record. It would first check if the record exists by checking if the domain exists in the database already.\\
+  If such an element does not exist in the database, we add the new ordered pair. However, since this is a union operation, it will still add the ordered pair even if the element does exists, which would mean we would have duplicates in our databse.\\
+  This will make it that we will have two elements in the same domain (which is flight), which violates the condition that all flights are unique.
+  
   \item Provide a definition for the core functionality of operation \textbf{delete} that erases a flight from \emph{map}, given the flight number.\\
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\Intially we would need to check if the ordered pair exists in maps. We would need to see that the flight is contained in the databse.\\
+  If that does exist, then we can delete the existing ordered pair. The translated statement for the delete would be:\\
+  \textbf{\emph{flight $\in$ dom map}}\\
 
   
   

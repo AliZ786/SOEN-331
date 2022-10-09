@@ -27,13 +27,16 @@ map = \\
 
 \begin{enumerate}
   \item Is \emph{map} a binary relation? Explain.\\
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\ Since this relation relates the the elemments of one set (flight), which is the domain, with the elements of another set {airplane} which is the codomain. \textbf{The relation map is hence considered a binary relation}.
   \item Is \emph{map} a function? Explain and if Yes, determine the type of the function.\\
-  \noindent\underline{Solution:}\\
+  \noindent\underline{Solution:}\\ We could say that this is a function since all elements of the domain are unique and are linked to exactly one member of the codomain.\\
+  In terms of what kind of function this is, we cannot say this is one-to-one function since both TS261 and TS765 are both linked to the Air Transat airline. Since this confirms that the fucntion is not one-to-one,
+  we can also confirm that this is not a bijective function since for a function to be bijective, it has to be onto and one-to-one. \textbf{Hence, we can say that this function is onto, since all elements of the codomain (airline), is mapped by atleast one member of the domain (flight)}.
   \item Define the precondition for operation \emph{add}, that adds a new flight-airline pair.\\
   \noindent\underline{Solution:}\\ Intially we would need to check if the ordered pair exists in maps. To check this, we would need to see that the flight is not contained in the database.\\
   If that doesn't exist, then we can add the new ordered pair. The translated statement for the add would be:\\
   \textbf{\emph{flight $\notin$ dom map}}\\
+
   \textbf{For Questions 4 and 5 assume the presence of the above precondition:}\\
   \item Provide two alternative definitions for the core functionality of operation \emph{add}.\\
   \noindent\underline{Solution:}\\ To add the operation, we can either do a union or we can do the insertion operator. The statements needed for those would look like the following:\

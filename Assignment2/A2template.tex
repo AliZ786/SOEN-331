@@ -14,124 +14,56 @@
 \usepackage{fancyvrb}
 
 
-\title{Concordia University\\
-Department of Computer Science and Software Engineering\\
-\textbf{SOEN 331:\\Formal Methods for Software Engineering}\\
-\ \\
-\textbf{Exercise in Z}}
-\author{\textbf{Dr. Constantinos Constantinides, P.Eng.}\\
-\ \\}
-\date{\today}
-
+\title{\textbf{Concordia University
+Department of Computer Science and Software
+Engineering} \\ \ \\SOEN 331 Section S: Formal Methods\\for Software Engineering\\
+ \\ 
+Assignment 2}
+\author{Mohammad Ali Zahir - 40077619 & Marwa Khalid - 40155098}
+\date{October 17, 2022 \\ & \ \\ Date of Submission: October 31, 2022}
 \begin{spacing}{1.5}
-
 \begin{document}
 \maketitle
 
 \newpage
-
-\section*{Temperature monitoring system with the Z specification}
-
-Consider a system called 'TempMonitor' that keeps a number of sensors, where each sensor is deployed in a separate location in order to read the location's temperature. Before the system is deployed, all locations are marked on a map, and each location will be addressed by a sensor. The formal specification of the system introduces the following three types:
-
-\[ SENSOR\_TYPE,  LOCATION\_TYPE, TEMPERATURE\_TYPE  \]
-
-\noindent We also introduce an enumerated type $MESSAGE$ which will assume values that correspond to success and error messages.\\
-
-\noindent Provide a formal specification in Z, with the following operations:
-
-\begin{itemize}
-	\item \texttt{DeploySensorOK}:  Places a new sensor to a unique location. You may assume that some (default) temperature is also passed as an argument.
-	\item \texttt{ReadTemperatureOK}: Obtain the temperature reading from a sensor, given the sensor's location.
-\end{itemize}
-
-\noindent Provide appropriate success and error schemata to be combined with the definitions above to produce robust specifications for the following interface:
-
-\begin{itemize}
-	\item \texttt{DeploySensor},
-	\item \texttt{ReadTemperature}.
-\end{itemize}
-
+\tableofcontents
 \newpage
 
-\noindent \underline{Solution}:
+\section{System Requirements}
+\noindent Consider a system such as \emph{flightradar24.com}. A flight is associated with \textbf{a flight number}
+(such as UA79), a specific code that an airline assigns to a particular flight in its network,
+and a route which is a source-destination city pair such as \textit{(NY ,Tokyo)}. For example, the
+United Airlines flight from New to Tokyo is tracked by the system as ${UA79 \mapsto  (NY ,Tokyo)$}.
+The formal specification of the system introduces the following three types:
+\\
 
-\begin{schema}{TempMonitor}
-deployed'~:~\mathbb{P}~SENSOR\_TYPE\\
-map : SENSOR\_TYPE \nrightarrow LOCATION\_TYPE \texttt{~~~~~--partial bijective}\\
-read : SENSOR\_TYPE  \nrightarrow TEMPERATURE\_TYPE\\
-\where
-deployed = \dom map\\
-deployed = \dom read
-\end{schema}
+\[
+  \hspace{5mm} \emph{FLIGHT\_NUMBER},\\
+  \hspace{5mm} \emph{ROUTE}, \\
+  \hspace{5mm} \emph{CITY}
+\]
 
-\begin{schema}{DeploySensorOK}
-\Delta TempMonitor\\
-sensor? : SENSOR\_TYPE\\
-location? : LOCATION\_TYPE\\
-temperature? : TEMPERATURE\_TYPE
-\where
-sensor? \notin deployed\\
-location? \notin \ran map\\
-deployed' = deployed \cup \{ sensor? \}\\
-map' = map \cup \{ sensor? \mapsto location? \}\\
-read' = read \cup \{ sensor? \mapsto temperature? \}
-\end{schema}
+\\
+\noindent where \\
+\noindent ${ROUTE: CITY \times CITY $} \\
 
+\noindent Flight numbers are unique, and there are possibly several flights that cover the same route.
+For example, there are possibly several flights from New York to Tokyo. The system must
+keep track of all active flights. Formally, let us have the following variables:
 
-\begin{schema}{ReadTemperatureOK}
-\Xi TempMonitor\\
-location? : LOCATION\_TYPE\\
-temperature! : TEMPERATURE\_TYPE
-\where
-location? \in \ran map\\
-temperature! = read(map^{-1}(location?))\\
-\end{schema}
+\begin{enumerate}
+\item \emph{active}: holds all active flight numbers.
+\item \emph{map}: holds a collection of active flight-route pairs.
+\end{enumerate}
 
-\begin{schema}{Success}
-\Xi TempMonitor\\
-response! : MESSAGE
-\where
-response!~=~'ok'\\
-\end{schema}
+\section{Your Assignment}
+\subsection{Description:}
 
+\begin{enumerate}
+\item (2 pts) Provide a declaration for variable \emph{active}. \\
+\noindent \underline{Solution:}\\
+\end{enumerate}
 
-
-\begin{schema}{SensorAlreadyDeployed}
-\Xi TempMonitor\\
-sensor? : SENSOR\_TYPE\\
-response! : Message
-\ST
-sensor? \in deployed\\
-response!~=~'Sensor~deployed'
-\end{schema}
-
-
-\begin{schema}{LocationAlreadyCovered}
-\Xi TempMonitor\\
-location? : LOCATION\_TYPE\\
-response! : Message
-\ST
-location? \in \ran map\\
-response!~=~'Location~already~covered'
-\end{schema}
-
-
-\begin{schema}{LocationUnknown}
-\Xi TempMonitor\\
-location? : LOCATION\_TYPE\\
-response! : Message
-\ST
-location? \notin \ran map\\
-response!~=~'Location~not~covered'
-\end{schema}
-
-\[ DeploySensor~\hat{=}~\\
-~~~(DeploySensorOK \wedge Success) \oplus (SensorAlreadyDeployed \vee LocationAlreadyCovered) \]
-
-
-
-\[ ReadTemperature~\hat{=}~(ReadTemperatureOK \wedge Success) \oplus LocationUnknown \]
 
 
 \end{spacing}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  28 OCT 2022 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  28 OCT 2022 21:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,47 +948,143 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--66
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Runaway argument?
+! Paragraph ended before \schema was complete.
+<to be read again> 
+                   \par 
+l.80 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
+! Misplaced \crcr.
+\also ->\crcr 
+              \noalign {\vskip \jot }
+l.81 \end{schema}
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
+! Misplaced \noalign.
+\also ->\crcr \noalign 
+                       {\vskip \jot }
+l.81 \end{schema}
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
- []
+! Misplaced \omit.
+\z@botline ->\also \omit 
+                         \hbox to\linewidth {\z@hrulefill \smash {\vrule hei...
+l.81 \end{schema}
+                 
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
+! Misplaced \cr.
+\z@botline ...dth\zedlinethickness depth 0pt}}\cr 
+                                                  
+l.81 \end{schema}
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
+! Misplaced \crcr.
+\endzed ->\crcr 
+                \egroup \endz@env 
+l.81 \end{schema}
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
- []
+! Extra }, or forgotten \endgroup.
+\endzed ->\crcr \egroup 
+                        \endz@env 
+l.81 \end{schema}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Extra }, or forgotten $.
+\z@makeinner ->\egroup 
+                       \global \z@curindent \z@ 
+l.81 \end{schema}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--82
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 \end{schema}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
- []
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.81 \end{schema}
+                 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 82--86
 
  []
 
-[4] (A2template.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--90
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 90--94
+
+ []
+
+[5] (A2template.aux)
 Package rerunfilecheck Info: File `A2template.out' has not changed.
 (rerunfilecheck)             Checksum: C1B331DF5669D9D5DF8E11C598EB0C2F;262.
  ) 
 Here is how much of TeX's memory you used:
- 12551 strings out of 475389
- 193061 string characters out of 2777944
+ 12552 strings out of 475389
+ 193067 string characters out of 2777944
  540661 words of memory out of 3000000
  33737 multiletter control sequences out of 15000+600000
  480748 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,9n,77p,253b,1636s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,9n,77p,623b,1638s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 bx12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmmi12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -997,9 +1093,9 @@ ublic/amsfonts/cm/cmr17.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Ali/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on A2template.pdf (4 pages, 97760 bytes).
+Output written on A2template.pdf (5 pages, 99733 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 86 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

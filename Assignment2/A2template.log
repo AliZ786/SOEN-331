@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  29 OCT 2022 02:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  29 OCT 2022 02:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,22 +953,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--69
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--92
+Underfull \hbox (badness 10000) in paragraph at lines 90--94
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 133--137
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 171--175
+Underfull \hbox (badness 10000) in paragraph at lines 172--176
 
  []
 
@@ -979,7 +979,7 @@ Package rerunfilecheck Info: File `A2template.out' has not changed.
 Here is how much of TeX's memory you used:
  12564 strings out of 475389
  193185 string characters out of 2777944
- 545661 words of memory out of 3000000
+ 544661 words of memory out of 3000000
  33744 multiletter control sequences out of 15000+600000
  481560 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -994,7 +994,7 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ali/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Ali/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Ali/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on A2template.pdf (7 pages, 123853 bytes).
+Output written on A2template.pdf (7 pages, 124122 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  20 named destinations out of 1000 (max. 500000)

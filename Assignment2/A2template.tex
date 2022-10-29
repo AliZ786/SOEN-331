@@ -76,21 +76,42 @@ Since we would say the map always has to be linked to an active flight-route pai
 \item (10 pts) Provide a formal specification of the state of the system in terms of a \textbf{Z
 specification schema}. \\
 \noindent \underline{Solution:}\\
-\begin{schema}
 
+\begin{schema}{flightradar24.com}
+active~:~\mathbb{P}~FLIGHT\_NUMBER\\
+Map : FLIGHT\_NUMBER \rightarrow ROUTE \texttt{~~~~~--total surjective}\\
+\where
+active = \dom map\\
 \end{schema}
+
+
 \item (15 pts) Provide a schema for operation \emph{RegisterFlightOK} that adds a flight to the
 tracker. With the aid of success and error schema(s), provide a definition for operation
 \emph{RegisterFlight} that the system will place in its exposed interface. \\
 \noindent \underline{Solution:}\\
+
+\begin{schema}{RegisterFlightOK}
+\Delta \ flightradar24.com\\
+flight\_number? : FLIGHT\_NUMBER\\
+route? : ROUTE\\
+\where
+flight\_number? \notin active\\
+route? \notin \ran map\\
+active' = active \cup \{ flight\_number? \}\\
+map' = map \cup \{ flight\_number? \mapsto route? \}\
+\end{schema}
+
+
 \item (15 pts) Provide a schema for operation \emph{GetRouteOK} that returns the route given its
 flight. With the aid of success and error schema(s), provide a definition for operation
 \emph{GetRoute} that the system will place in its exposed interface. \\
 \noindent \underline{Solution:}\\
+
 \item Provide a schema for operation \emph{GetFlightOK} that returns any and all active
 flights given a route. With the aid of success and error schema(s), provide a definition
 for operation \emph{GetFlight} that the system will place in its exposed interface. \\
 \noindent \underline{Solution:}\\
+
 
 \end{enumerate}
 

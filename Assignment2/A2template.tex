@@ -79,7 +79,7 @@ specification schema}. \\
 
 \begin{schema}{flightradar24.com}
 active~:~\mathbb{P}~FLIGHT\_NUMBER\\
-Map : FLIGHT\_NUMBER \rightarrow ROUTE \texttt{~~~~~--total surjective}\\
+map : FLIGHT\_NUMBER \rightarrow ROUTE \texttt{~~~~~--total surjective}\\
 \where
 active = \dom map\\
 \end{schema}
@@ -93,7 +93,7 @@ tracker. With the aid of success and error schema(s), provide a definition for o
 \begin{schema}{RegisterFlightOK}
 \Delta \ flightradar24.com\\
 flight\_number? : FLIGHT\_NUMBER\\
-route? : ROUTE\\
+route! : ROUTE\\
 \where
 flight\_number? \notin active\\
 route? \notin \ran map\\
@@ -106,6 +106,18 @@ map' = map \cup \{ flight\_number? \mapsto route? \}\
 flight. With the aid of success and error schema(s), provide a definition for operation
 \emph{GetRoute} that the system will place in its exposed interface. \\
 \noindent \underline{Solution:}\\
+
+\begin{schema}{GetRouteOK}
+\Xi \ flightradar24.com\\
+flight\_number? : FLIGHT\_NUMBER \\
+route! : ROUTE\\
+\where
+flight\_number? \in active\\
+route! = map(flight\_number?)
+\end{schema}
+
+
+
 
 \item Provide a schema for operation \emph{GetFlightOK} that returns any and all active
 flights given a route. With the aid of success and error schema(s), provide a definition

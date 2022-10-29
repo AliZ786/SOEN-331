@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  29 OCT 2022 00:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  29 OCT 2022 01:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -968,7 +968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--109
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
+Underfull \hbox (badness 10000) in paragraph at lines 122--126
 
  []
 
@@ -994,7 +994,7 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ali/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Ali/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Ali/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on A2template.pdf (5 pages, 117072 bytes).
+Output written on A2template.pdf (5 pages, 117676 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)

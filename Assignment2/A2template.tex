@@ -97,7 +97,7 @@ For question 5, 6, 7, to create the error and success schemas, we will create a 
 \begin{schema}{RegisterFlightOK}
 \Delta \ flightradar24.com\\
 flight\_number? : FLIGHT\_NUMBER\\
-route! : ROUTE\\
+route? : ROUTE\\
 \where
 flight\_number? \notin active\\
 route? \notin \ran map\\
@@ -121,6 +121,7 @@ route? : ROUTE \\
 response! : RESULT
 \ST
 flight\_number? \in active\\
+route? \in ran \ map \\
 response!~=~'Flight~having~flight\_number?~is~already~active'
 \end{schema}
 

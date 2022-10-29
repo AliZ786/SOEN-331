@@ -90,6 +90,8 @@ tracker. With the aid of success and error schema(s), provide a definition for o
 \emph{RegisterFlight} that the system will place in its exposed interface. \\
 \noindent \underline{Solution:}\\
 
+For question 5, 6, 7, to create the error and success schemas, we will create a new enumrated value which will output success and error which we call RESULT. 
+
 \begin{schema}{RegisterFlightOK}
 \Delta \ flightradar24.com\\
 flight\_number? : FLIGHT\_NUMBER\\
@@ -100,6 +102,32 @@ route? \notin \ran map\\
 active' = active \cup \{ flight\_number? \}\\
 map' = map \cup \{ flight\_number? \mapsto route? \}\
 \end{schema}
+
+\begin{schema}{Success}
+\Xi \ flightradar24.com\\
+response! : RESULT
+\where
+response!~=~'SUCCESS'\\
+\end{schema}
+
+
+
+\begin{schema}{ActiveFlightExists}
+\Xi \ flightradar24.com\\
+flight\_number? : FLIGHT\_NUMBER\\
+route? : ROUTE \\
+response! : RESULT
+\ST
+flight\_number? \in active\\
+route? \in ran \ map \\
+response!~=~'Flight~having~flight\_number?~is~already~active'
+\end{schema}
+
+
+\[ RegisterFlight~\hat{=}~\\
+~~~(RegisterFlightOK \wedge Success) \oplus (ActiveFlightExists) \]
+
+
 
 
 \item (15 pts) Provide a schema for operation \emph{GetRouteOK} that returns the route given its
@@ -123,6 +151,17 @@ route! = map(flight\_number?)
 flights given a route. With the aid of success and error schema(s), provide a definition
 for operation \emph{GetFlight} that the system will place in its exposed interface. \\
 \noindent \underline{Solution:}\\
+
+
+\begin{schema}{GetFlightOK}
+\Xi \ flightradar24.com\\
+flight\_number! : FLIGHT\_NUMBER \\
+route? : ROUTE\\
+\where
+route? \in ran \ map \\
+flight\_number! = map(route?) \\
+\end{schema}
+
 
 
 \end{enumerate}

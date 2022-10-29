@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  29 OCT 2022 01:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.10.1)  29 OCT 2022 02:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -968,22 +968,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--137
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
+Underfull \hbox (badness 10000) in paragraph at lines 171--175
 
  []
 
-[6] (A2template.aux)
+[6] [7] (A2template.aux)
 Package rerunfilecheck Info: File `A2template.out' has not changed.
 (rerunfilecheck)             Checksum: C1B331DF5669D9D5DF8E11C598EB0C2F;262.
  ) 
 Here is how much of TeX's memory you used:
- 12563 strings out of 475389
- 193179 string characters out of 2777944
+ 12564 strings out of 475389
+ 193185 string characters out of 2777944
  545661 words of memory out of 3000000
  33744 multiletter control sequences out of 15000+600000
  481560 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,10n,77p,623b,1662s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,623b,1668s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 bx12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmmi12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -994,9 +994,9 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ali/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Ali/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Ali/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on A2template.pdf (6 pages, 121203 bytes).
+Output written on A2template.pdf (7 pages, 123853 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

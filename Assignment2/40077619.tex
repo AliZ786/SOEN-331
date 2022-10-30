@@ -121,6 +121,7 @@ route? : ROUTE \\
 response! : RESULT
 \ST
 flight\_number? \in active\\
+route? \in ran \ map \\
 response!~=~'Flight~having~flight\_number?~is~already~active'
 \end{schema}
 
@@ -158,7 +159,6 @@ flight\_number? : FLIGHT\_NUMBER\\
 response! : RESULT
 \ST
 flight\_number? \notin active\\
-route? \notin map \\
 response!~=~'Since~flight\_number?~is~not~active~, unable~to~find~route'
 \end{schema}
 
@@ -194,14 +194,24 @@ response!~=~'SUCCESS'\\
 \begin{schema}{FlightNotFound}
 \Xi \ flightradar24.com \\
 route? : ROUTE \\
+response! : RESULT \\
 \where
 route? \notin ran \ map \\
 response!~=~'Unable~to~find~flight~with~this~route?'\\
 \end{schema}
 
+\begin{schema}{FlightNotActive}
+\Xi \ flightradar24.com \\
+flight\_number? : FLIGHT\_NUMBER \\
+response! : RESULT \\
+\where
+flight_number? \notin active \\
+response!~=~'Found~no~active~flight~with~this~flight\_number?'\\
+\end{schema}
+
 
 \[ GetFlight~\hat{=}~\\
-~~~(GetFlightOK \wedge Success) \oplus FlightNotFound \]
+~~~(GetFlightOK \wedge Success) \oplus (FlightNotFound \vee FlightNotActive) \]
 
 
 

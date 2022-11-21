@@ -26,3 +26,7 @@ events(State1) :-
     findall([Event],
             transition(State1,_,Event, _, _), 
             EventList), write(EventList).
+
+
+% (b) Create a rule that succeeds by collecting all system actions into a list and returns
+% such list.

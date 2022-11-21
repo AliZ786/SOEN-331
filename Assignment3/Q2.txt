@@ -1,3 +1,15 @@
+----- CONCORDIA UNIVERSITY
+----- Department of Computer Science and Software Engineering
+----- SOEN 331 Section S:  Assignment 3
+----- Fall 2022
+----- Date of submission: November 21, 2022
+-----
+----- Authors:
+----- Mohammad Ali Zahir - ID: 40077619 & Marwa Khalid - ID: 40155098
+
+
+
+
 ----- Question A -----
 
 Query: events(active)
@@ -5,27 +17,62 @@ Result: [[configure], [skip-configure], [idle]]
 
 
 Query: events(configuring)
-
 Result: [[finish-configuring]]
 
-
-
 Query : events(reading)
-
 Result: [[values-above-threshold], [reset-threshold]]
 
-
-
 Query: events(emergency)
-
 Result: [[reset-button-press]]
+
+
+Query: events(hello) - state does not exist
+Result: []
 
 
 ----- Question B -----
 
-Query: actions(E) - E just displays all the actions in the system
-
+Query: actions(All) - All just displays all the actions in the system
 Result: [[Displays configuring mode], [Perform series of beeps], [System becomes idle], 
 [Proper threshold values met, perform series of beeps], [System will enter emergency mode], 
 [LED lights will shut off], [Exit emergency mode/shut off siren], 
 [System enters active mode], [System shuts off]]
+
+Query: actions(reading) - If we just want the actions from the reading mode
+Result: [[System will enter emergency mode], [LED lights will shut off]]
+
+
+Query : actions(hello) - state does not exist 
+Result: []
+
+
+
+----- Question C -----
+
+Query : event_guard_pairs(active, configuring)
+Result: [[configure, Want to set threshold values]]
+
+Query: event_guard_pairs(configuring, reading)
+Result: [[finish-configuring, Proper threshold values are met]]
+
+Query: event_guard_pairs(reading, emergency)
+Result: [[values-above-threshold, If CO_value or Temp_Value > threshold_value]]
+
+Query: event_guard_pairs(hello, emergency) - source state does not exist
+Result: []
+
+Query: event_guard_pairs(active, bye) - destination state does not exist
+Result : []
+
+
+----- Question D -----
+
+Query: source_destination_pairs(All)
+Result: [[active, configuring], [active, reading], [active, idle], 
+[configuring, reading], [reading, emergency], [reading, configuring], 
+[emergency, reading], [idle, active], [idle, exit]]
+
+Query : source_destination_pairs(hello)
+Result: false
+
+

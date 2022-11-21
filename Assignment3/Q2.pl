@@ -12,6 +12,7 @@
 
 
 % Facts 
+
 state(idle, null, null, null).
 state(active, null, null, null).
 state(configuring, 'Displays configuring mode', 'Proper threshold values are inputted', null).
@@ -62,8 +63,16 @@ actions(State1) :-
 % from the source to the destination. The criteria are defined as event-guard
 % pairs.
 
-event_guard_pairs(Set, State1, State2) :-
+event_guard_pairs(State1, State2) :-
     findall([Event, Guard],
             (transition(State1, State2,Event,Guard , _), State1 \== State2),
+            List), write(List). 
+
+% (d) Create a rule that succeeds by returning a list of source-destination state pairs,
+% not taking into consideration any recursive or internal transitions.
+
+source_destination_pairs(List) :-
+ 		findall([State1, State2],
+            (transition(State1, State2,_,_ , _), State1 \== State2),
             List),
-    		list_to_set(List,Set). 
+    		write(List). 

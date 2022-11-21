@@ -1,0 +1,26 @@
+Question A
+
+Query: events(active)
+Result: [[configure], [skip-configure], [idle]]
+
+image.png
+
+Query: events(configuring)
+
+Result: [[finish-configuring]]
+
+image.png
+
+
+Query : events(reading)
+
+Result: [[values-above-threshold], [reset-threshold]]
+
+image.png
+
+
+Query: events(emergency)
+
+Result: [[reset-button-press]]
+
+image.png

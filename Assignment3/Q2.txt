@@ -1,26 +1,31 @@
-Question A
+----- Question A -----
 
 Query: events(active)
 Result: [[configure], [skip-configure], [idle]]
 
-image.png
 
 Query: events(configuring)
 
 Result: [[finish-configuring]]
 
-image.png
 
 
 Query : events(reading)
 
 Result: [[values-above-threshold], [reset-threshold]]
 
-image.png
 
 
 Query: events(emergency)
 
 Result: [[reset-button-press]]
 
-image.png
+
+----- Question B -----
+
+Query: actions(E) - E just displays all the actions in the system
+
+Result: [[Displays configuring mode], [Perform series of beeps], [System becomes idle], 
+[Proper threshold values met, perform series of beeps], [System will enter emergency mode], 
+[LED lights will shut off], [Exit emergency mode/shut off siren], 
+[System enters active mode], [System shuts off]]

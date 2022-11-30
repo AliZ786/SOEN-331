@@ -31,14 +31,56 @@ Assignment 4}
 
 \section{Our assignment}
 \begin{enumerate}
-\item Find a logically equivalent formula for $\phi \ W \ \psi$ and provide a short reasoning
+\item (10 pts) Find a logically equivalent formula for $\phi \ W \ \psi$ and provide a short reasoning
 to support your answer. Represent this equivalence between the two expressions with
 the appropriate logical connective, and support your reasoning.\\\
 \\
-\noindent \underline{Solution}:\\ The logically equivalent formula would for this would be:\\
-\( (\phi \ W \ \psi) \equiv \ $(\phi \ \oplus \ \psi$) \\
-\noindent These are equivalent because  $\phi \ W \ \psi$ means that until the value for $\psi$ is false, $\phi$ is gonna return true. This is only acheivable with the
-\textbf{XOR} operation since whenever the value for $\psi$ is 0, value for $\phi$ is equal to 1. and vice versa. 
+\noindent \underline{Solution}:\\ The logically equivalent formula for this would be:\\
+\( (\phi \ W \ \psi) \equiv \ $(\phi \ U \ \psi$)\ \vee \ $\square(\psi)$ \\
+\noindent These are equivalent, because the principle of the strong until operator U. Since the $\psi$ is never guaranteed to be true, we would need to add an extra or statement because if the statement $\psi$ becomes true it would mean that $\phi$ can't be true. This means that $\phi$ would be true until a certain condition ($\psi$ is true) is met. \\
+
+\item (10 pts) Find a logically equivalent formula for $\phi \ U \ \psi$ , and provide a short reasoning
+to support your answer. Represent this equivalence between the two expressions with the appropriate logical connective, and support your reasoning.\\\
+\\
+\noindent \underline{Solution}:\\ The logically equivalent formula for this would be: \\
+$(\phi \ U \ \psi$) \equiv \  $(\phi \ W \ \psi) \ \wedge \ $\lozenge(\psi)$ \\
+\noindent These are equivalent, because the principle of the strong until operator U. We know that this $\psi$ will eventually become true. We then now that we can use the weak until clause with an eventually operator, because the only way that $\phi$ is not true is when the $\psi$ is not true. We add the and operator, because we want to insure that we actually get $\psi$ as being true, because this may never happen. \\
+
+\item (10 pts) Find a logically equivalent formula for $\phi \ R \ \psi$ in terms of W , and provide a short reasoning
+to support your answer. Represent this equivalence between the two expressions with the appropriate logical connective, and support your reasoning.\\\
+\\
+\noindent \underline{Solution}:\\
+\noindent This paragraph refers to Questions 4 - 5: Consider a railroad with a single rail and a
+road level-crossing. We introduce the following propositions that represent events:
+\begin{itemize}
+\item[] a : A train is approaching.
+\item[] b : The barrier is down
+\item[] c : A train is crossing
+\item[] l: A light is blinking
+\end{itemize}
+\item (15 pts) Express each of the following requirements formally. For each one, proceed to
+find a logically equivalent formula that captures the safety property of the system (i.e.
+in terms of “something bad never happens”):
+\begin{itemize}
+\item[(a)] (5 pts) When a train is crossing, the barrier must be down. \\
+\noindent \underline{Solution}:\\
+\item[(b)] (5 pts) If a train is approaching or crossing, then the light must be blinking.
+\noindent \underline{Solution}:\\
+\item[(c)] (5 pts) If the barrier is up and the light is off, then no train is coming or crossing.
+\noindent \underline{Solution}:\\
+\end{itemize}
+\item (10 pts) Express each of the following requirements formally in terms of the liveness
+property (i.e. in terms of “something good eventually happens”):
+\begin{itemize}
+\item[(a)] (5 pts) When a train is approaching, it will eventually cross.. \\
+\noindent \underline{Solution}:\\
+\item[(b)] (5 pts) When a train is approaching and no train is crossing, then the barrier will
+eventually go down before the train crosses. \\
+\noindent \underline{Solution}:\\
+\end{itemize}
+\item (45 pts) The behavior of a program is expressed by the following temporal formula:
+
+
 \end{enumerate}
 
 

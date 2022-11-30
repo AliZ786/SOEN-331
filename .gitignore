@@ -4,3 +4,5 @@
 *.out
 *.toc
 *.aux
+*.dvi
+*.synctex.gz

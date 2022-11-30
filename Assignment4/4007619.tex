@@ -36,14 +36,14 @@ to support your answer. Represent this equivalence between the two expressions w
 the appropriate logical connective, and support your reasoning.\\\
 \\
 \noindent \underline{Solution}:\\ The logically equivalent formula for this would be:\\
-\( (\phi \ W \ \psi) \equiv \ $(\phi \ U \ \psi$)\ \vee \ $\square(\psi)$ \\
-\noindent These are equivalent, because the principle of the strong until operator U. Since the $\psi$ is never guaranteed to be true, we would need to add an extra or statement because if the statement $\psi$ becomes true it would mean that $\phi$ can't be true. This means that $\phi$ would be true until a certain condition ($\psi$ is true) is met. \\
+\( (\phi \ \textbf{W} \ \psi) \equiv \ $(\phi \ \textbf{U} \ \psi$)\ \vee \ $\square(\psi)$ \\
+\noindent These are equivalent, because the principle of the strong until operator \textbf{U}. Since the $\psi$ is never guaranteed to be true, we would need to add an extra or statement because if the statement $\psi$ becomes true it would mean that $\phi$ can't be true. This means that $\phi$ would be true until a certain condition ($\psi$ is true) is met. \\
 
 \item (10 pts) Find a logically equivalent formula for $\phi \ U \ \psi$ , and provide a short reasoning
 to support your answer. Represent this equivalence between the two expressions with the appropriate logical connective, and support your reasoning.\\\
 \\
 \noindent \underline{Solution}:\\ The logically equivalent formula for this would be: \\
-$(\phi \ U \ \psi$) \equiv \  $(\phi \ W \ \psi) \ \wedge \ $\lozenge(\psi)$ \\
+$(\phi \ \textbf{U} \ \psi$) \equiv \  $(\phi \ \textbf{W} \ \psi) \ \wedge \ $\lozenge(\psi)$ \\
 \noindent These are equivalent, because the principle of the strong until operator U. We know that this $\psi$ will eventually become true. We then now that we can use the weak until clause with an eventually operator, because the only way that $\phi$ is not true is when the $\psi$ is not true. We add the and operator, because we want to insure that we actually get $\psi$ as being true, because this may never happen. \\
 
 \item (10 pts) Find a logically equivalent formula for $\phi \ R \ \psi$ in terms of W , and provide a short reasoning
@@ -70,15 +70,18 @@ in terms of “something bad never happens”):
 \square $(a \vee c \rightarrow \bigcirc l)$
 \item[(c)] (5 pts) If the barrier is up and the light is off, then no train is coming or crossing.
 \noindent \underline{Solution}:\\
+\square $(\lnot(b \wedge l) \rightarrow \lnot \bigcirc(a \vee c)) $
 \end{itemize}
 \item (10 pts) Express each of the following requirements formally in terms of the liveness
 property (i.e. in terms of “something good eventually happens”):
 \begin{itemize}
 \item[(a)] (5 pts) When a train is approaching, it will eventually cross.. \\
 \noindent \underline{Solution}:\\
+\square $(a \rightarrow \lozenge c) $
 \item[(b)] (5 pts) When a train is approaching and no train is crossing, then the barrier will
 eventually go down before the train crosses. \\
 \noindent \underline{Solution}:\\
+\square $((a \wedge \lnot c) \rightarrow \lozenge(b \ \textbf{U} \ a)) $
 \end{itemize}
 \item (45 pts) The behavior of a program is expressed by the following temporal formula:\\
 

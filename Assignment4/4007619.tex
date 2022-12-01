@@ -43,14 +43,16 @@ the appropriate logical connective, and support your reasoning.\\\
 to support your answer. Represent this equivalence between the two expressions with the appropriate logical connective, and support your reasoning.\\\
 \\
 \noindent \underline{Solution}:\\ The logically equivalent formula for this would be: \\
-$(\phi \ \textbf{U} \ \psi$) \equiv \  $(\phi \ \textbf{W} \ \psi) \ \wedge \ $\lozenge(\psi)$ \\
-\noindent These are equivalent, because the principle of the strong until operator U. We know that this $\psi$ will eventually become true. We then now that we can use the weak until clause with an eventually operator, because the only way that $\phi$ is not true is when the $\psi$ is not true. We add the and operator, because we want to insure that we actually get $\psi$ as being true, because this may never happen. \\
+$(\phi \ \textbf{U} \ \psi$) \equiv \  $(\phi \ \textbf{W} \ \psi) \ \wedge \ $\bigcirc \lozenge(\psi)$ \\
+\noindent These are equivalent, because the principle of the strong until operator U. We know that this $\psi$ will eventually become true. We then now that we can use the weak until clause with an eventually operator, because the only way that $\phi$ is not true is when the $\psi$ is not true. We add the and operator, because we want to insure that the next one we actually get $\psi$ as being true, because this may never happen. \\
 
 \item (10 pts) Find a logically equivalent formula for $\phi \ R \ \psi$ in terms of W , and provide a short reasoning
 to support your answer. Represent this equivalence between the two expressions with the appropriate logical connective, and support your reasoning.\\\
 \\
 \noindent \underline{Solution}:\\ The logically equivalent formula for this would be: \\
-$(\phi \ \textbf{R} \ \psi$) \equiv \  \lnot $((\phi \ \textbf{W} \ \psi) \ \wedge \ $\lozenge(\psi))$ \\
+$(\phi \ \textbf{R} \ \psi$) \equiv \ $(\phi \ \textbf{W} \ \psi) \ \wedge \ $\lozenge(\psi)$ \\
+\noindent These are equivalent as the weak until will make the operation hold until something is triggered. We need the second part of the equation to guarantee that $\psi$ will eventually has to be true, because if it is not then, this will never hold. Hence the and statement. \\
+\\
 \noindent This paragraph refers to Questions 4 - 5: Consider a railroad with a single rail and a
 road level-crossing. We introduce the following propositions that represent events:
 \begin{itemize}

@@ -64,13 +64,13 @@ in terms of “something bad never happens”):
 \begin{itemize}
 \item[(a)] (5 pts) When a train is crossing, the barrier must be down. \\
 \noindent \underline{Solution}:\\ 
-\square $(c \rightarrow \bigcirc b)$
+\square $(c \rightarrow \square b)$
 \item[(b)] (5 pts) If a train is approaching or crossing, then the light must be blinking.
 \noindent \underline{Solution}:\\
-\square $(a \vee c \rightarrow \bigcirc l)$
+\square $(a \vee c \rightarrow \square l)$
 \item[(c)] (5 pts) If the barrier is up and the light is off, then no train is coming or crossing.
 \noindent \underline{Solution}:\\
-\square $(\lnot(b \wedge l) \rightarrow \lnot \bigcirc(a \vee c)) $
+\square $(\lnot(b \wedge l) \rightarrow \lnot \square(a \vee c)) $
 \end{itemize}
 \item (10 pts) Express each of the following requirements formally in terms of the liveness
 property (i.e. in terms of “something good eventually happens”):
@@ -81,7 +81,7 @@ property (i.e. in terms of “something good eventually happens”):
 \item[(b)] (5 pts) When a train is approaching and no train is crossing, then the barrier will
 eventually go down before the train crosses. \\
 \noindent \underline{Solution}:\\
-\square $((a \wedge \lnot c) \rightarrow \lozenge(b \ \textbf{U} \ a)) $
+\square $((a \wedge \lnot c) \rightarrow \lozenge(\lnot b \ \textbf{U} \ c)) $
 \end{itemize}
 \item (45 pts) The behavior of a program is expressed by the following temporal formula:\\
 

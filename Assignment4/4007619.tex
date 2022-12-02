@@ -110,6 +110,16 @@ Hence at i =3, is when our strong release should have ended, but at i =4, we see
 s) to the requirements would you make (you may temporarily assume the
 role of a stakeholder) in order to achieve satisfiability. \\
 \noindent \underline{Solution}:\\
+As the stakeholder, we are allowed to do change the program requirements how we want them to be. Hence the best way to acheive satisfiability would be the remove the condition that cause the problem in the second timeline which would be: \
+$\psi \wedge \bigcirc \sigma \rightarrow \bigcirc^2 \pi $ \\
+Hence after we remove that condition, our new timelines look like: \\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth, height = 10cm, keepaspectratio]{images/SOEN331_A4_Q6c.png}
+\end{figure}
+\\
+\noindent Here we can see now that i+4 is removed and i + 3 is where the strong release ends and it \textbf{hence satisfies the behaviour for all requirements now}. \\
+
 \item[(d)] (5 pts) Having resolved any possible conflicts in requirements, specify conditions
 (models of behavior), if any exist, under which the program can terminate. If
 none exist, please indicate so. \\

@@ -102,7 +102,10 @@ eventually go down before the train crosses. \\
 \begin{itemize}
 \item[(b)](10 pts) Is the set of requirements satisfiable in all models of behavior? Explain
 why or why not. \\
-\noindent \underline{Solution}:\\
+\noindent \underline{Solution}:\\ This set of requirements is not satistfiable in all behaviors. The first timeline, the top one terminates fine, hence it has no problems. The second one however has the operation $ \textbf{R} $ which means strong release. The specific condition that is using the strong release, would be the:
+$\psi \wedge \tau \rightarrow \sigma \ \textbf{R} \ \pi $ \\
+Hence at i =3, is when our strong release should have ended, but at i =4, we see an extra $ \pi $ which is not supposed to be there. \textbf{Hence this is not valid for all requirements}.  \\
+
 \item[(c)] (10 pts) In the case where the set of requirements is not satisfiable, what modification(
 s) to the requirements would you make (you may temporarily assume the
 role of a stakeholder) in order to achieve satisfiability. \\

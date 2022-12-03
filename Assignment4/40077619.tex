@@ -44,12 +44,17 @@ to support your answer. Represent this equivalence between the two expressions w
 \\
 \noindent \underline{Solution}:\\ The logically equivalent formula for this would be: \\
 $(\phi \ \textbf{U} \ \psi$) \equiv \  $(\phi \ \textbf{W} \ \psi) \ \wedge \ $\bigcirc \lozenge(\psi)$ \\
-\noindent These are equivalent, because the principle of the strong until operator U. We know that this $\psi$ will eventually become true. We then now that we can use the weak until clause with an eventually operator, because the only way that $\phi$ is not true is when the $\psi$ is not true. We add the and operator, because we want to insure that the next one we actually get $\psi$ as being true, because this may never happen. \\
+\noindent These are equivalent because the principle of the strong until operator U. We know that this $\psi$ will eventually become true. We then now that we can use the weak until clause with an eventually operator, because the only way that $\phi$ is not true is when the $\psi$ is not true. We add the and operator, because we want to insure that the next one we actually get $\psi$ as being true, because this may never happen. \\
 
-\item (10 pts) Find a logically equivalent formula for $\phi \ R \ \psi$ in terms of W , and provide a short reasoning
-to support your answer. Represent this equivalence between the two expressions with the appropriate logical connective, and support your reasoning.\\\
-\\
-\noindent \underline{Solution}:\\ The logically equivalent formula for this would be: \\
+\item (10 pts) \noindent Answer \textbf{either} Part 1 \textbf{or} Part 2 \\
+\begin{itemize}
+    \item [\textbf{Part 1.}] Can we provide a logically equivalent formula for $\phi \ \textbf{R} \ \psi$  in terms of \textbf{W}?
+Support your answer. \\
+\item[\textbf{Part 2.}] Find logically equivalent formulas for $\square \phi \ and \ \lozenge \phi$. Do not deploy the duality relationship between the two. Provide a short reasoning to support your answer.
+Represent this equivalence between the two expressions with the appropriate logical connective.
+\end{itemize}
+\noindent \underline{Solution}:\\ \textbf{We will do part 1 of this question.} \\
+The logically equivalent formula for this would be: \\
 $(\phi \ \textbf{R} \ \psi$) \equiv \ $(\phi \ \textbf{W} \ \psi) \ \wedge \ $\lozenge(\psi)$ \\
 \noindent These are equivalent as the weak until will make the operation hold until something is triggered. We need the second part of the equation to guarantee that $\psi$ will eventually has to be true, because if it is not then, this will never hold. Hence the and statement. \\
 \\
@@ -82,29 +87,29 @@ property (i.e. in terms of “something good eventually happens”):
 \noindent \underline{Solution}:\\
 \square $(a \rightarrow \lozenge c) $
 \item[(b)] (5 pts) When a train is approaching and no train is crossing, then the barrier will
-eventually go down before the train crosses. \\
+eventually, go down before the train crosses. \\
 \noindent \underline{Solution}:\\
 \square $((a \wedge \lnot c) \rightarrow \lozenge(\lnot b \ \textbf{U} \ c)) $
 \end{itemize}
+\newpage
 \item (45 pts) The behavior of a program is expressed by the following temporal formula:\\
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.9\textwidth, height = 15cm, keepaspectratio]{images/Q6.png}
 \end{figure}
-\begin{itemize}
+\newpage
+\begin{enumerate}
 \item[(a)](20 pts) Visualize all models of behavior. \\
-\noindent \underline{Solution}:\\
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.9\textwidth, height = 15cm, keepaspectratio]{images/SOEN331_A4_Q6a.png}
-\end{figure}
-\begin{itemize}
+\noindent \underline{Solution}:\\ \\
+\begin{minipage}{\linewidth}
+   \centering
+\includegraphics[width=0.9\textwidth, height = 15cm, keepaspectratio]{images/SOEN331_A4_Q6a.png} 
+\end{minipage}
 \item[(b)](10 pts) Is the set of requirements satisfiable in all models of behavior? Explain
 why or why not. \\
 \noindent \underline{Solution}:\\ This set of requirements is not satistfiable in all behaviors. The first timeline, the top one terminates fine, hence it has no problems. The second one however has the operation $ \textbf{R} $ which means strong release. The specific condition that is using the strong release, would be the:
 $\psi \wedge \tau \rightarrow \sigma \ \textbf{R} \ \pi $ \\
-Hence at i =3, is when our strong release should have ended, but at i =4, we see an extra $ \pi $ which is not supposed to be there. \textbf{Hence this is not valid for all requirements}.  \\
+Hence at i+3, is when our strong release should have ended, but at i+4, we see an extra $ \pi $ which is not supposed to be there. \textbf{Hence this is not valid for all requirements}.  \\
 
 \item[(c)] (10 pts) In the case where the set of requirements is not satisfiable, what modification(
 s) to the requirements would you make (you may temporarily assume the
@@ -112,27 +117,35 @@ role of a stakeholder) in order to achieve satisfiability. \\
 \noindent \underline{Solution}:\\
 As the stakeholder, we are allowed to do change the program requirements how we want them to be. Hence the best way to acheive satisfiability would be the remove the condition that cause the problem in the second timeline which would be: \
 $\psi \wedge \bigcirc \sigma \rightarrow \bigcirc^2 \pi $ \\
-Hence after we remove that condition, our new timelines look like: \\
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.9\textwidth, height = 10cm, keepaspectratio]{images/SOEN331_A4_Q6c.png}
-\end{figure}
+
+Hence after we remove that condition, The new timelines would look like: \\ \\
+\begin{minipage}{\linewidth}
+   \centering
+\includegraphics[width=0.9\textwidth, height = 12.5cm, keepaspectratio]{images/SOEN331_A4_Q6c.png} 
+\end{minipage}
 \\
-\noindent Here we can see now that i+4 is removed and i + 3 is where the strong release ends and it \textbf{hence satisfies the behaviour for all requirements now}. \\
+\\
+\noindent We can see now that i+4 is removed and i + 3 is where the strong release ends and it \textbf{hence satisfies the behavior for all requirements now}. \\
 
 \item[(d)] (5 pts) Having resolved any possible conflicts in requirements, specify conditions
 (models of behavior), if any exist, under which the program can terminate. If
 none exist, please indicate so. \\
-\\
-\\
-\\
 \noindent \underline{Solution}:\\
 There are two conditions in which the program terminates in: \\
 \begin{enumerate}
-\item[(1).]$\langle $ (\phi \wedge \tau),(\psi \wedge \omega), \chi, (\chi \wedge \sigma) $
-\rangle$ \\
-\item[(2).] $\langle $ (\psi \wedge \pi \wedge \tau), (\pi \wedge \psi \wedge \omega), (\pi \wedge \psi), (\pi \wedge \chi \wedge \sigma) $ \rangle$
-\\
+\item[(1).]$\langle $(\phi \wedge \tau),(\psi \wedge \omega), \chi, (\chi \wedge \sigma)$\rangle$ 
+\item[(2).] $\langle $(\psi \wedge \pi \wedge \tau), (\pi \wedge \psi \wedge \omega), (\pi \wedge \psi), (\pi \wedge \chi \wedge \sigma) $\rangle$
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
 \end{enumerate}
 \end{itemize}
 

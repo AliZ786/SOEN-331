@@ -115,10 +115,12 @@ Hence at i+3, is when our strong release should have ended, but at i+4, we see a
 s) to the requirements would you make (you may temporarily assume the
 role of a stakeholder) in order to achieve satisfiability. \\
 \noindent \underline{Solution}:\\
-As the stakeholder, we are allowed to do change the program requirements how we want them to be. Hence the best way to acheive satisfiability would be the remove the condition that cause the problem in the second timeline which would be: \
+As the stakeholder, we are allowed to do change the program requirements how we want them to be. Hence the best way to acheive satisfiability would be to modify the condition that cause the problem in the second timeline which would be: \
 $\psi \wedge \bigcirc \sigma \rightarrow \bigcirc^2 \pi $ \\
-
-Hence after we remove that condition, The new timelines would look like: \\ \\
+We would change that condition to this: \\
+$\psi \wedge \bigcirc \sigma \rightarrow \bigcirc \pi $ \\
+This ensures that we would insert a pi in the i+3 node, and not in the i+4 node, which would make it that we would not need to add an extra $\pi$ since it would already be released. \\
+Hence after we modify that condition, The new timelines would look like: \\ \\
 \begin{minipage}{\linewidth}
    \centering
 \includegraphics[width=0.9\textwidth, height = 12.5cm, keepaspectratio]{images/SOEN331_A4_Q6c.png} 
